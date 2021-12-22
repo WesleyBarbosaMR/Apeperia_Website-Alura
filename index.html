@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/rodape.css">    
   <link rel="stylesheet" href="css/dialogNewsletter.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width" />
 </head>
 <body>
 
@@ -339,52 +339,54 @@
           </p>
 
           <div class="contatoCampo contatoCampo--sucesso">
-            <label>Nome: </label>
-            <input type="text" class="contatoCampo--validouFoi" value="Natan Souza" required>
+            <label for="nome">Nome: </label>
+            <input type="text" class="contatoCampo--validouFoi" id="nome" placeholder="Digite o nome pelo qual as pessoas te chamam" required>
           </div>  
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Email: </label>
-            <input type="email" class="contatoCampo--validouErro" required>
+            <label for="email">Email: </label>
+            <input type="email" class="contatoCampo--validouErro" id="email" placeholder="Digite o seu email usual" required>
             <span class="contatoCampo-msg contatoCampo-msg--erro">
               Você quis dizer <a href="#">gmail.com?</a>
             </span>
           </div>
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Telefone: </label>
-            <input type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
-            <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
+            <label for="telefone">Telefone: </label>
+            <input type="text" class="contatoCampo--validouErro" id="telefone" placeholder="Digite número do seu telefone com DDD">
+            <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD. Exemplo: (11) 5571-2751</span>
           </div>     
 
           <div class="contatoCampo">
-            <label>CEP: </label>
-            <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
+            <label for="cep">CEP: </label>
+            <input type="text" class="contatoCampo--validouErro" id="cep" maxlength="8" placeholder="Digite número do seu CEP" required>
+            <span class="contatoCampo-msg contatoCampo-msg--erro">Número inválido. Exemplo de CEP: 04101-300</span>
+            
           </div>
 
           <div class="contatoCampo">
-            <label>Endereço: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Rua Vergueiro">
+            <label for="endereco">Endereço: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" id="endereco" readonly value="Rua Vergueiro">
           </div>   
 
           <div class="contatoCampo">
-            <label>Bairro: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Vila Mariana">
+            <label for="bairro">Bairro: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" id="bairro" readonly value="Vila Mariana">
           </div>   
 
           <div class="contatoCampo">
-            <label>Cidade: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="São Paulo">
+            <label for="cidade">Cidade: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" id="cidade" readonly value="São Paulo">
           </div>   
 
           <div class="contatoCampo">
-            <label>Estado: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="SP">
+            <label for="estado">Estado: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" id="estado" readonly value="SP">
           </div>   
 
           <div class="contatoCampo">
-            <label>Mensagem: </label>
-            <textarea name="" cols="30" rows="10" required></textarea>
+            <label for="mensagem">Mensagem: </label>
+            <textarea name="" cols="30" rows="10" id="mensagem" placeholder="Digite aqui a sua mensagem para nós!" required></textarea>
           </div>
 
           <div class="contatoCampo">
@@ -425,7 +427,8 @@
           </p>
         </div>
 
-        <video src="img/formacao-java.mp4" class="secaoInstitucional-video" alt="">
+        <video src="img/formacao-java.mp4" class="secaoInstitucional-video" alt="" controls>
+          <track src="img/legenda-portugues-brasil.vtt" kind="subtitles" srclang="pt-br" label="Português(Brasil)">
         </video>
 
       </div>
